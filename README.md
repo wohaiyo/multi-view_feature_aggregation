@@ -16,3 +16,4 @@ where M is the total number of category and N is the total number of pixels in t
    ![ALL_CE](https://github.com/wohaiyo/multi-view_feature_aggregation/blob/master/all_ce.png)
    
 where V is the number of input view.
+   For views with synthesized occlusions, we define three extra cross-entropy losses when the view number is three on the weighted feature maps { ˆ X n } n={1,2,3} , to make sure that the feature aggregation happens within visible areas of the target view and complementary parts from the nearby views. We do not calculate the loss of the synthetic occlusion area in one view, but only the loss of the visible part of the area in other views, please see more details in the source code.
