@@ -1,5 +1,10 @@
-# multi-view_feature_aggregation
-This repository is built for our paper Multi-view Feature Aggregation for Facade Parsing. The source code and more details will be released in the near future.
+# Multiview Feature Aggregation for Facade Parsing
+This project contains the Tensorflow implementation for the proposed method for facade parsing: [[IEEE Xplore]](https://ieeexplore.ieee.org/document/9257006/).
+
+### Introduction
+Facade image parsing is essential to the semantic understanding and 3-D reconstruction of urban scenes. Considering the occlusion and appearance ambiguity in single-view
+images and the easy acquisition of multiple views, in this letter, we propose a multiview enhanced deep architecture for facade parsing. The highlight of this architecture is a cross-view feature aggregation module that can learn to choose and fuse useful convolutional neural network (CNN) features from nearby views to enhance the representation of a target view. Benefitting from the multiview enhanced representation, the proposed architecture can better deal with the ambiguity and occlusion issues. Moreover, our cross-view feature aggregation module can be straightforwardly integrated into existing single-image parsing frameworks. Extensive comparison experiments and ablation studies are conducted to demonstrate the good performance of the proposed method and the validity and transportability of the cross-view feature aggregation module.
+<p align="center"><img width="80%" src="architecture.png" /></p>
 
 ## Data augmentation
    In order to make the model to be capable of leveraging information from multi-views, we synthesize occlusions with randomly block at each view in the training stage. The block area of occlusion is a factor that directly determines the model. We experiment under seven block areas: 0.0, 0.025, 0.05, 0.075, 0.1, 0.125, 0.15.  The block area is fixed at 0.075 in the experiments.
