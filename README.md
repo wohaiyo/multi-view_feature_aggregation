@@ -20,9 +20,9 @@ cd Pyramid_ALKNet
 - One GPU with 11GB is needed
 
 ### Dataset
-You need to download the RueMonge2014 dataset, and put the files in the `data` folder with following structure.
+You need to download the RueMonge2014 dataset, and use the script 'data/prepare_ruemonge_data_homo.py' to pre-process the images, put the files in the `data` folder with following structure.
 ```
-├── RueMonge2014
+├── RueMonge428_seq3_homo
 |    ├── train
 |    |    ├── img
 |    |    └── label
@@ -35,18 +35,18 @@ You need to download the RueMonge2014 dataset, and put the files in the `data` f
 
 ### Training
 
-- You can run: `python train.py -h` to check the detail of optional arguments.
+- You can run: `python train_gradient.py -h` to check the detail of optional arguments.
 Basically, in the `config.py`, you can set the dataset, train type, epochs and batch size, etc.
 ```
-python train.py
+python train_gradient.py
 ```
 - training on RueMonge2014 train set
 
 
 ### Testing
-- After training, the checkpoint will be saved at `saves` folder, you can use `eval.py` to get the result.
+- After training, the checkpoint will be saved at `saves` folder, you can use `eval_multi.py` to get the result.
 ```
-python eval.py
+python eval_multi.py
 ```
 
 ## Data augmentation
