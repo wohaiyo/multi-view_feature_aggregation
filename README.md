@@ -14,8 +14,8 @@ pip install opencv-python pillow numpy matplotlib imageio .....
 ```
 - Clone this repository
 ```
-git clone https://github.com/wohaiyo/Pyramid_ALKNet
-cd Pyramid_ALKNet
+git clone https://github.com/wohaiyo/multi-view_feature_aggregation
+cd multi-view_feature_aggregation
 ```
 - One GPU with 11GB is needed
 
